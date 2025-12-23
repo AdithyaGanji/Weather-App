@@ -6,12 +6,29 @@
     <title>Weather App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/location-search.css">
+    <link rel="stylesheet" href="styles/weather-info.css">
   </head>
 
   <body>
-    
+    <main class="container">
+      <div class="main-container">
+        <div class="location-search-container">
+          <input class="location-input" type="text" placeholder="Enter a location">
+          <div class="search-icon-container">
+            <img class="search-icon" src="images/search-icon.svg">
+          </div>
+        </div>
+
+        <div class="weather-info-container"></div>
+
+        <div class=""></div>
+      </div>
+    </main>
   </body>
+
   <script src="scripts/main.js" type="module"></script>
 </html>
