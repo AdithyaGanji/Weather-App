@@ -1,0 +1,19 @@
+@media (max-width: 750px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .main-container {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .main-container {
+    width: 90%;
+  }
+}

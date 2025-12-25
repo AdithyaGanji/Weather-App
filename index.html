@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
+
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Weather App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,9 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/location-search.css">
     <link rel="stylesheet" href="styles/weather-info.css">
+    <link rel="stylesheet" href="styles/hourly-weather-info.css">
+    <link rel="stylesheet" href="styles/error-info.css">
+    <link rel="stylesheet" href="styles/queries.css">
   </head>
 
   <body>
@@ -23,12 +27,22 @@
           </div>
         </div>
 
-        <div class="weather-info-container"></div>
+        <div class="weather-info-container">
+          <img class="weather-category-icon" src="images/weather-category-icons/sunny.svg">
+          <div class="temperature-container">
+            <div class="temperature">6</div>
+            <div class="degree-celcius">°C</div>
+          </div>
+          <div class="weather-condition">Sunny</div>
+        </div>
 
-        <div class=""></div>
+        <div class="error-info-container"></div>
+
+        <div tabindex="-1" class="hourly-weather-info-container"></div>
       </div>
     </main>
   </body>
 
-  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/weather-info.js" type="module"></script>
+
 </html>
