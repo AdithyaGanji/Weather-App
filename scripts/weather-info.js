@@ -9,17 +9,6 @@ const searchIconElement = document.querySelector('.search-icon-container');
 // Set focus on the location input as soon as the page loads
 inputElement.focus();
 
-setInterval(() => {
-  if (inputElement.value.length > 0) {
-    searchIconElement.classList.add('toggle-on-search-icon');
-    searchIconElement.tabIndex = '0';
-  }
-  else {
-    searchIconElement.classList.remove('toggle-on-search-icon');
-    searchIconElement.tabIndex = '-1';
-  }
-}, 1);
-
 (function addEventListeners() {
   document
     .body
@@ -27,6 +16,18 @@ setInterval(() => {
       if (event.key === 'Enter' && inputElement.value.length > 0)
         searchIconElement.click();
       });
+
+  inputElement
+    .addEventListener('input', () => {
+      if (inputElement.value.length > 0) {
+        searchIconElement.classList.add('toggle-on-search-icon');
+        searchIconElement.tabIndex = '0';
+      }
+      else {
+        searchIconElement.classList.remove('toggle-on-search-icon');
+        searchIconElement.tabIndex = '-1';
+      }
+    })
 
   searchIconElement
     .addEventListener('click', () => {
@@ -48,7 +49,7 @@ async function displayWeatherInfo() {
   const locationEntered = inputElement.value;
 
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${locationEntered}&days=2`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${locationEntered}&days=2`);
     const data = await response.json();
     
     // If the user enters a typo,
