@@ -37,7 +37,7 @@ setInterval(() => {
 (function setInitialConfiguration() {
   document
   .querySelector('.location-input')
-  .value = 'London';
+  .value = 'Paris';
 
   document
     .querySelector('.search-icon-container')
