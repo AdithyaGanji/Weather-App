@@ -11,12 +11,12 @@ inputElement.focus();
 
 setInterval(() => {
   if (inputElement.value.length > 0) {
-    searchIconElement.style.left = '0';
-    searchIconElement.style.opacity = '1';
+    searchIconElement.classList.add('toggle-on-search-icon');
+    searchIconElement.tabIndex = '0';
   }
   else {
-    searchIconElement.style.left = '4.75rem';
-    searchIconElement.style.opacity = '0';
+    searchIconElement.classList.remove('toggle-on-search-icon');
+    searchIconElement.tabIndex = '-1';
   }
 }, 1);
 
